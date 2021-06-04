@@ -1,0 +1,68 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    openshift.io/generated-by: OpenShiftNewApp
+  creationTimestamp: "2021-06-04T10:38:15Z"
+  labels:
+    app: httpd
+    app.kubernetes.io/component: httpd
+    app.kubernetes.io/instance: httpd
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:openshift.io/generated-by: {}
+        f:labels:
+          .: {}
+          f:app: {}
+          f:app.kubernetes.io/component: {}
+          f:app.kubernetes.io/instance: {}
+      f:spec:
+        f:ports:
+          .: {}
+          k:{"port":8080,"protocol":"TCP"}:
+            .: {}
+            f:name: {}
+            f:port: {}
+            f:protocol: {}
+            f:targetPort: {}
+          k:{"port":8443,"protocol":"TCP"}:
+            .: {}
+            f:name: {}
+            f:port: {}
+            f:protocol: {}
+            f:targetPort: {}
+        f:selector:
+          .: {}
+          f:deployment: {}
+        f:sessionAffinity: {}
+        f:type: {}
+    manager: oc
+    operation: Update
+    time: "2021-06-04T10:38:15Z"
+  name: httpd
+  namespace: httpd
+  resourceVersion: "445587"
+  selfLink: /api/v1/namespaces/httpd/services/httpd
+  uid: 28f3faf1-20c9-422a-a9f1-0cfe060de74d
+spec:
+  clusterIP: 172.30.168.151
+  ports:
+  - name: 8080-tcp
+    port: 8080
+    protocol: TCP
+    targetPort: 8080
+  - name: 8443-tcp
+    port: 8443
+    protocol: TCP
+    targetPort: 8443
+  selector:
+    deployment: httpd
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}
