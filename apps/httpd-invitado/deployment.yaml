@@ -69,16 +69,16 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: httpd
+  name: httpd-invitado
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: httpd
+      app: httpd-invitado
   template:
     metadata:
       labels:
-        app: httpd
+        app: httpd-invitado
     spec:
       containers:
       containers:
