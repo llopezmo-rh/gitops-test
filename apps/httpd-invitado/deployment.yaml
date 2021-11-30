@@ -11,7 +11,6 @@ spec:
     metadata:
       labels:
         app: httpd-invitado
-    namespace: httpd-invitado
     spec:
       containers:
       containers:
