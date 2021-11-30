@@ -1,29 +1,13 @@
-apiVersion: authorization.openshift.io/v1
-groupNames: null
+apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
-  creationTimestamp: "2021-11-29T15:28:59Z"
-  managedFields:
-  - apiVersion: rbac.authorization.k8s.io/v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:roleRef:
-        f:apiGroup: {}
-        f:kind: {}
-        f:name: {}
-      f:subjects: {}
-    manager: openshift-apiserver
-    operation: Update
-    time: "2021-11-29T15:28:59Z"
-  name: admin
+  name: invitado-admin
   namespace: httpd-invitado
-  resourceVersion: "126628"
-  selfLink: /apis/rbac.authorization.k8s.io/v1/namespaces/httpd-invitado/rolebindings/admin
-  uid: eaa84b4a-1b79-496d-8d34-724c565eda51
 roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
   name: admin
 subjects:
-- kind: User
-  name: invitado
-userNames:
-- invitado
+- kind: ServiceAccount
+  name: argocd-cluster-argocd-application-controller
+  namespace: openshift-gitops
