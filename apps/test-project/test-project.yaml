@@ -1,50 +1,7 @@
-apiVersion: project.openshift.io/v1
-kind: Project
+apiVersion: v1
+kind: Namespace
 metadata:
-  annotations:
-    kubectl.kubernetes.io/last-applied-configuration: |
-      {"apiVersion":"v1","kind":"Namespace","metadata":{"annotations":{},"labels":{"app.kubernetes.io/instance":"cluster-configs"},"name":"test-project"},"spec":{"finalizers":["kubernetes"]}}
-    openshift.io/sa.scc.mcs: s0:c25,c15
-    openshift.io/sa.scc.supplemental-groups: 1000630000/10000
-    openshift.io/sa.scc.uid-range: 1000630000/10000
-  creationTimestamp: "2021-11-30T08:24:15Z"
-  labels:
-    app.kubernetes.io/instance: cluster-configs
-  managedFields:
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:metadata:
-        f:annotations:
-          .: {}
-          f:kubectl.kubernetes.io/last-applied-configuration: {}
-        f:labels:
-          .: {}
-          f:app.kubernetes.io/instance: {}
-      f:spec:
-        f:finalizers: {}
-      f:status:
-        f:phase: {}
-    manager: argocd-application-controller
-    operation: Update
-    time: "2021-11-30T08:24:15Z"
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:metadata:
-        f:annotations:
-          f:openshift.io/sa.scc.mcs: {}
-          f:openshift.io/sa.scc.supplemental-groups: {}
-          f:openshift.io/sa.scc.uid-range: {}
-    manager: cluster-policy-controller
-    operation: Update
-    time: "2021-11-30T08:24:15Z"
   name: test-project
-  resourceVersion: "437437"
-  selfLink: /api/v1/namespaces/test-project
-  uid: d1e1fbe6-dde9-48cc-907c-1a817ff7f3c4
 spec:
   finalizers:
   - kubernetes
-status:
-  phase: Active
