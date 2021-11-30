@@ -56,27 +56,3 @@ spec:
       schedulerName: default-scheduler
       securityContext: {}
       terminationGracePeriodSeconds: 30
-status:
-  conditions:
-  - lastTransitionTime: "2021-11-30T09:00:22Z"
-    lastUpdateTime: "2021-11-30T09:00:22Z"
-    message: Deployment does not have minimum availability.
-    reason: MinimumReplicasUnavailable
-    status: "False"
-    type: Available
-  - lastTransitionTime: "2021-11-30T09:00:22Z"
-    lastUpdateTime: "2021-11-30T09:00:22Z"
-    message: 'Pod "httpd-69c564846d-64rvz" is invalid: spec.containers[0].image: Invalid value: " ": must not have leading or trailing whitespace'
-    reason: FailedCreate
-    status: "True"
-    type: ReplicaFailure
-  - lastTransitionTime: "2021-11-30T09:00:22Z"
-    lastUpdateTime: "2021-11-30T09:00:22Z"
-    message: ReplicaSet "httpd-7b969bf9bd" is progressing.
-    reason: ReplicaSetUpdated
-    status: "True"
-    type: Progressing
-  observedGeneration: 2
-  replicas: 1
-  unavailableReplicas: 2
-  updatedReplicas: 1
